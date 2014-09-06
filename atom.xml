@@ -4,7 +4,7 @@
   <title><![CDATA[DataSulis]]></title>
   <link href="http://datasulis.github.io/atom.xml" rel="self"/>
   <link href="http://datasulis.github.io/"/>
-  <updated>2014-09-06T09:31:35+01:00</updated>
+  <updated>2014-09-06T09:44:15+01:00</updated>
   <id>http://datasulis.github.io/</id>
   <author>
     <name><![CDATA[Leigh Dodds]]></name>
@@ -18,19 +18,19 @@
     <link href="http://datasulis.github.io/blog/2014/09/06/bath-hacked/"/>
     <updated>2014-09-06T08:03:00+01:00</updated>
     <id>http://datasulis.github.io/blog/2014/09/06/bath-hacked</id>
-    <content type="html"><![CDATA[<p>Its beeen over two years since I posted to this blog. At the time I had good intentions that I was going to post regularly and try my best to start an open data community here in Bath. Unfortunately, as always happens real life interviewed: a few months after this happened I changed job and became <a href="http://consulting.ldodds.com/">freelance</a> with the result that I had no time for side projects as I was taking on as much work as possible to get the business started.</p>
+    <content type="html"><![CDATA[<p>It&rsquo;s beeen over two years since I posted to this blog. At the time I had good intentions that I was going to post regularly and try my best to start an open data community here in Bath. Unfortunately, as always happens real life intervened. A few months after this happened I ended up changing jobs and went <a href="http://consulting.ldodds.com/">freelance</a>. The result was that I had no time for side projects as I was taking on as much work as possible to get the business started.</p>
 
-<p>I&rsquo;ve never completely given up on the idea behind Data Sulis though. While I&rsquo;ve not had much time to do visible work I&rsquo;ve continued to research open datasets that might be useful to the local community. My work with the Open Data Institute and others has also given me some useful experience.</p>
+<p>I&rsquo;ve never completely given up on the idea behind DataSulis though. While I&rsquo;ve not had much time to do any visible work I&rsquo;ve continued to research open datasets that might be useful to the local community. My work with the Open Data Institute and others has also given me some useful experience.</p>
 
 <p>I was about to kick-start this project again when I discovered <a href="http://www.bathhacked.org/">Bath: Hacked</a>. It turns out that I&rsquo;m not the only person passionate about open data in Bath and they&rsquo;ve been extremely busy!</p>
 
-<p>The <a href="http://twitter.com/BathHacked">@BathHacked</a> team have been working with B&amp;NES to open up some datasets. After a succcessful hack day early this year they&rsquo;ve now launched <a href="http://data.bathhacked.org">a beta data store based on Socrata</a>.</p>
+<p>The <a href="http://twitter.com/BathHacked">@BathHacked</a> team have been working with B&amp;NES to open up some datasets. After a succcessful hack day earlier this year they&rsquo;ve now launched <a href="http://data.bathhacked.org">a beta data store based on Socrata</a>.</p>
 
-<p>As a result of this I&rsquo;ve been reworking the code in the <a href="https://github.com/datasulis">DataSulis github account</a> to add support for posting the data to Socrata. I&rsquo;ve also been spending time exploring the Socrata platform. I&rsquo;ve also agreed to help manage the BathHacked store to help people get the most out of it and ensure that the datasets are well-published.</p>
+<p>As a result of this I&rsquo;ve been reworking the code in the <a href="https://github.com/datasulis">DataSulis github account</a> to add support for posting the data to Socrata. I&rsquo;ve also been spending time exploring the Socrata platform. I volunteered to help out with BathHacked and have agreed to help manage the data store, to help people get the most out of it and ensure that the datasets are well-published.</p>
 
-<p>There&rsquo;s some interesting datasets in the store already, including some continuously updated air quality data taken from sensors around the city. B&amp;NES are now running an <a href="http://www.bathhacked.org/news/air-quality-hack-20-september/">air quality hack day</a> to encourage developers to use the data in the BathHacked store to build some interesting applications.</p>
+<p>There&rsquo;s some interesting datasets in the store already, including some continuously updated air quality data taken from sensors around the city. B&amp;NES are running an <a href="http://www.bathhacked.org/news/air-quality-hack-20-september/">air quality hack day</a> in a few weeks to encourage developers to use the data to build some interesting applications.</p>
 
-<p>While I&rsquo;ll be blogging on the Bath Hacked website and contributing to <a href="https://github.com/bathhacked">the BathHacked github project</a> I&rsquo;m going to revive this project and hopefully blog here a little more frequently. I&rsquo;ll be using it to publish my personal perspective on open data, investigations of useful datasets, and updates on my own hacking with local open data.</p>
+<p>While I&rsquo;ll be blogging on the Bath Hacked website, contributing to <a href="https://github.com/bathhacked">the BathHacked github project</a>, etc. I&rsquo;ve decided to revive this project. My plan is to use this site to write about my own personal perspective on open data in Bath, publish investigations of useful datasets, and share updates on my own hacking with local open data.</p>
 ]]></content>
   </entry>
   
