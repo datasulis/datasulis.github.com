@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: News | DataSulis]]></title>
+  <link href="http://datasulis.github.io/blog/categories/news/atom.xml" rel="self"/>
+  <link href="http://datasulis.github.io/"/>
+  <updated>2014-09-06T08:46:55+01:00</updated>
+  <id>http://datasulis.github.io/</id>
+  <author>
+    <name><![CDATA[Leigh Dodds]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[How You Can Help. Yes, You!]]></title>
+    <link href="http://datasulis.github.io/blog/2012/03/29/how-you-can-help-yes/"/>
+    <updated>2012-03-29T16:32:00+01:00</updated>
+    <id>http://datasulis.github.io/blog/2012/03/29/how-you-can-help-yes</id>
+    <content type="html"><![CDATA[<p>After I posted a link to this project on Twitter last night, there was some really encouraging feedback from the local community. Looks like there&rsquo;s some interest in a Bath based hackday and cider. Mainly cider in fact, but that&rsquo;s all good :)</p>
+
+<p>One question I got asked is: how do we move this forward? I thought I&rsquo;d post some ideas about next steps, as well as some suggestions for how people can get involved.</p>
+
+<!-- More -->
+
+
+<p>First of all though lets consider why we might want to collate some local data. There are a number of good reasons. The primary reason is to have free, Open Data that can be used to create some useful applications. Those app can be useful not just for local people, but also for the thousands of tourists that visit the city each year.</p>
+
+<p>Those applications could be built by local startups and provide a way for them to earn a few quid. The apps could also help local businesses increase their revenues, by driving attracting more customers. If we&rsquo;re provided with better data from the local council, or central government, we can all be better engaged and help it deliver better services to us.</p>
+
+<p>Open Data is pure win.</p>
+
+<p>With these kinds of uses in mind, what kinds of data might we want to collect:</p>
+
+<ul>
+<li>Government data &ndash; There&rsquo;s a whole range of potentially useful, interesting statistics published by central government, or by the likes of the <a href="http://www.dh.gov.uk/en/Publicationsandstatistics/Statistics/Performancedataandstatistics/">NHS</a>, that could be re-purposed for local use</li>
+<li>Local Government data &ndash; Planning applications, health &amp; safety inspections, etc.</li>
+<li>Business listings &ndash; How about a free, locally maintained database of local businesses, with contact details, up to date information on opening-closing times, twitter accounts, blogs, and calenders?</li>
+<li>Travel information &ndash; Bus and train times. Cycle paths</li>
+<li>News &ndash; Searchable indexes of news sourced both locally as well as from national newspapers, e.g. the Guardian</li>
+<li>Reviews &ndash; local restaurant, business, and event reviews</li>
+<li>Jobs &ndash; local job adverts</li>
+<li>Social Network &ndash; <a href="http://welovebath.co.uk">WeLoveBath</a> is becoming the focal point of Bath&rsquo;s social network. Who is in it and how do they connect up? What about Facebook, Foursquare, etc?</li>
+<li>Media &ndash; <a href="http://www.flickr.com/groups/bath/">Flickr</a> and <a href="http://www.geograph.org.uk">Geograph</a> are full of pictures of Bath. Wouldn&rsquo;t it be nice to have a dataset of Creative Commons licensed photos for use in local applications? Maybe to power a new kind of tourist guide? What about sound and video? Music?</li>
+<li>Events &ndash; There&rsquo;s a lot going on in Bath for a relatively small city. I&rsquo;d love to see a central database and calendar of events across the city, not just in the Theatre, or Komedia, but all of the pub nights, reading groups and other local events.</li>
+</ul>
+
+
+<p>&hellip;and there&rsquo;s a whole lot more. Cultural heritage, local walking routes, weather, etc. I&rsquo;ve even had crazy ideas about mapping out all the species of trees in the Arboretum in Victoria Bath. Maybe a school project?!</p>
+
+<p>So how can you (yes, you!) get involved?</p>
+
+<ul>
+<li>Are you a geek? Yes? Then why not:
+
+<ul>
+<li>Share some code showing how to query, collect or scrape some data together for other developers to build on? A lot of data is out there already, we just need to make it easier to find and access</li>
+<li>Use some of the data showcased here to create an useful application or visualisation?</li>
+<li>Help build an application or service to help crowd-source some data?</li>
+</ul>
+</li>
+<li>Are you a non-geek (aka Normal Person)? Then how about:
+
+<ul>
+<li>Sharing some thoughts on what kinds of local application or service you&rsquo;d like to see?</li>
+<li>Curating some data using a Google Spreadsheet? No coding required, but the data is still easy to share with others</li>
+</ul>
+</li>
+<li>Are you a local business or firm? Then how about:
+
+<ul>
+<li>Getting in touch to see how you could help share some of you data for others to use?</li>
+</ul>
+</li>
+</ul>
+
+
+<p>I&rsquo;ll happily point to whatever people hack, build, or share from this blog, just send in pointers. I&rsquo;ll try and showcase as much as possible whilst continuing to add more content and collated data myself.</p>
+
+<p>I&rsquo;m keen to take a lo-fi approach and just do the simplest things necessary to help collect some data and make it easily accessible to whoever needs it. There are lots of useful free tools available. For example <a href="http://www.google.com/google-d-s/forms/">Google Spreadsheet Forms</a> are a quick and dirty way to crowdsource some basic information.</p>
+
+<p>To really get things going I suggest we first try and collate some more data, and then maybe have a local hackday to try build something on what we&rsquo;ve collected. And/or have a focused hacking session to collect together even more data. Or both.</p>
+
+<p>Oh, and the cider. Don&rsquo;t forget the cider.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Hello Bath Hackers]]></title>
+    <link href="http://datasulis.github.io/blog/2012/03/27/hello-bath-hackers/"/>
+    <updated>2012-03-27T13:44:00+01:00</updated>
+    <id>http://datasulis.github.io/blog/2012/03/27/hello-bath-hackers</id>
+    <content type="html"><![CDATA[<p>First post!</p>
+
+<p>This site is an experiment in creating a collection of useful pointers, blog posts, datasets and maybe even APIs for local hackers in Bath. As I&rsquo;ve explained a little in the <a href="http://datasulis.org/about">about</a> page I&rsquo;m interested in exploring how a more local, city level view of Open Data could help support some interesting innovative hacking amongst the local geek community.</p>
+
+<p>As the recent [Bath Digital Festival] has shown Bath has developed a really amazing local tech community. [WeLoveBath] also shows that Bath has a great community of engaged citizens. But I&rsquo;ve not seen any efforts to start curating local datasets that can help both of those communities do interesting, innovative things in our local area.</p>
+
+<p>This site sets out to see if we can remedy that. Basically, I&rsquo;ve spent a lot of time over the last few years doing data modelling and munging and I decided its time to use those skills for good :)</p>
+
+<p>I expect this will be something of a journey and I&rsquo;m hoping that some of you out there will want to join in and help out. I&rsquo;m hoping that if its successful then maybe we can run a BathCamp or hackday dedicated to local data projects.</p>
+
+<p>It doesn&rsquo;t matter if your a geek or not I&rsquo;m hoping that we can explore lots of ways to curate and collect local data. I&rsquo;m as interested in running some local crowd-sourcing experiments as I am in wrangling data from various APIs.</p>
+
+<p>The project is intended to be open from top to bottom, so all of the content, source code and data should be up for re-use.</p>
+
+<p>Lets see what we can make.</p>
+]]></content>
+  </entry>
+  
+</feed>

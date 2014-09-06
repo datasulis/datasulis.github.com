@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Health | DataSulis]]></title>
+  <link href="http://datasulis.github.io/blog/categories/health/atom.xml" rel="self"/>
+  <link href="http://datasulis.github.io/"/>
+  <updated>2014-09-06T08:46:55+01:00</updated>
+  <id>http://datasulis.github.io/</id>
+  <author>
+    <name><![CDATA[Leigh Dodds]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[The NHS in Bath]]></title>
+    <link href="http://datasulis.github.io/blog/2012/03/28/the-nhs-in-bath/"/>
+    <updated>2012-03-28T19:20:00+01:00</updated>
+    <id>http://datasulis.github.io/blog/2012/03/28/the-nhs-in-bath</id>
+    <content type="html"><![CDATA[<p>The <a href="http://www.connectingforhealth.nhs.uk/systemsandservices/data/ods">NHS Organisation Data Service</a> has a responsibility to help various parts of the NHS, and affiliated organisations, exchange information as efficiently as possible. Part of that activity involves maintaining a database of organisations relevant to the NHS. That includes everything from NHS Primary Care Trusts through to individual Pharmacies.</p>
+
+<p>Their data is published under the Open Government License so can be freely reused. Lets take a look at what it contains and how we can grab a local extract.</p>
+
+<!-- More -->
+
+
+<p>If you visit the <a href="http://www.connectingforhealth.nhs.uk/systemsandservices/data/ods">ODS Website</a> you can see that they publish a large number of CSV files that contain data about organisations and their relationships. The structure of the CSV files is well-documented and the files are well-normalised so they&rsquo;re easy to process.</p>
+
+<p>Some of the data is <a href="http://www.connectingforhealth.nhs.uk/systemsandservices/data/ods/datafiles">updated on a weekly basis</a>. This is the core NHS organisational data. Other data, such as that <a href="http://www.connectingforhealth.nhs.uk/systemsandservices/data/ods/genmedpracs">listing GPs and Branch Surgeries</a> is updated less frequently.</p>
+
+<p>The data is useful for two reasons:</p>
+
+<ul>
+<li>If you want to draw maps showing, e.g. location of pharmacies then there&rsquo;s well normalised address data that can be geocoded.</li>
+<li>If you want to link up government statistics with individual medical practices or service providers, then you&rsquo;ll need the unique identifiers</li>
+</ul>
+
+
+<p>I&rsquo;ve previously taken all of the ODS data and <a href="http://kasabi.com/dataset/nhs-organization">loaded it into Kasabi</a>. Kasabi is my day job: its a data marketplace for hosting and publish data. If you want to query the data online then you could use any of the range of APIs available from there. Sign-up is free.</p>
+
+<p>For the purposes of the DataSulis project we&rsquo;re only really interested in the data about the NHS in Bath, i.e. BA1 and BA2. I wrote <a href="https://github.com/datasulis/bath-nhs">some Ruby scripts</a> to download the latest ODS files and then extract those organisations that have the relevant postcodes. The filtered CSV files are then cached locally. You could use them as the basis for further processing.</p>
+
+<p>To illustrate the output I&rsquo;ve put <a href="https://github.com/datasulis/bath-nhs/tree/master/data">a snapshot of the data into github too</a>. For example here&rsquo;s a CSV file containing a list of the <a href="https://github.com/datasulis/bath-nhs/blob/master/data/nhs-ods-egdpprac.csv">Dental Practices in Bath</a></p>
+]]></content>
+  </entry>
+  
+</feed>

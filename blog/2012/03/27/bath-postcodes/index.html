@@ -1,0 +1,416 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Bath Postcodes - DataSulis</title>
+  <meta name="author" content="Leigh Dodds">
+
+  
+  <meta name="description" content="If we&rsquo;re going to be working with local data then it makes sense to have a list of local postcodes. There&rsquo;s all kinds of data that can be &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://datasulis.github.io/blog/2012/03/27/bath-postcodes">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="DataSulis" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">DataSulis</a></h1>
+  
+    <h2>Curating local data for local people. In Bath.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:datasulis.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Bath Postcodes</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2012-03-27T14:06:00+01:00'><span class='date'><span class='date-month'>Mar</span> <span class='date-day'>27</span><span class='date-suffix'>th</span>, <span class='date-year'>2012</span></span> <span class='time'>2:06 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>If we&rsquo;re going to be working with local data then it makes sense to have a list of local postcodes. There&rsquo;s all kinds of data that can be usefully linked or combined based on postcode information. For example you could aggregate statistics on crime rates or house prices. Happily the Ordnance Survey now publish some useful Open Data about UK postcodes.</p>
+
+<p>So lets look at how we can work with their data to query it and extract it for local use.</p>
+
+<!--More-->
+
+
+<p>Here&rsquo;s a quick primer on postcodes. Postcodes have a structure to them. Each of the different parts of a postcode refer to a different area and those areas have a hierarchical relationship. Here are some examples along with the name that the Ordnance Survey (OS) uses to describe them:</p>
+
+<ul>
+<li><a href="http://data.ordnancesurvey.co.uk/id/postcodearea/BA">BA</a> = Post Code Area</li>
+<li><a href="http://data.ordnancesurvey.co.uk/id/postcodedistrict/BA2">BA2</a> = Post Code District</li>
+<li><a href="http://data.ordnancesurvey.co.uk/id/postcodesector/BA23">BA2 3</a> = Post Code Sector</li>
+<li><a href="http://data.ordnancesurvey.co.uk/id/postcodeunit/BA23PL">BA2 3PL</a> = Post Code Unit</li>
+</ul>
+
+
+<p>So &ldquo;BA2 3PL&rdquo; is within a sector called &ldquo;BA2 3&rdquo;, and so on. The OS publish their data in various ways, including as <a href="http://en.wikipedia.org/Linked_Data">Linked Data</a>. Without going into details, Linked Data is just a way to publish data to the web by giving everything a unique URL.</p>
+
+<p>So based on a postcode or part of a postcode you can build a URL to the OS website and use it to grab some data. For example here&rsquo;s <a href="http://data.ordnancesurvey.co.uk/doc/postcodeunit/BA23PL.json">a JSON description of BA23PL</a>. That means that you can quickly lookup some useful data such as the lat/long which is the centre of a post code, or to discover in which electoral ward it lies. More on those alternate geographic regions in another post.</p>
+
+<p>Sometimes though you just want a to grab some data for local processing. Having a list of local postcodes can help drive some address matching or other data processing task. So how can we get a complete list of local postcodes?</p>
+
+<p>The OS allow you to <a href="http://www.ordnancesurvey.co.uk/oswebsite/products/os-opendata.html">download data from their site</a>, so you could grab all of the postcode dataset and process it to extract what you need. But there&rsquo;s a simpler way. The OS also provide an API called a &ldquo;SPARQL Endpoint&rdquo; for their data. SPARQL is a query language for working with RDF, its basically a way to query a graph of Linked Data to extract the bits you need.</p>
+
+<p>Here&rsquo;s a SPARQL query that will fetch data about all of the Post Code Units that are within the BA1 or BA2 Post Code Districts:</p>
+
+<div><script src='https://gist.github.com/2220182.js'></script>
+<noscript><pre><code>PREFIX po: &lt;http://data.ordnancesurvey.co.uk/ontology/postcode/&gt;
+PREFIX spatial: &lt;http://data.ordnancesurvey.co.uk/ontology/spatialrelations/&gt;
+PREFIX skos: &lt;http://www.w3.org/2004/02/skos/core#&gt;
+PREFIX geo: &lt;http://www.w3.org/2003/01/geo/wgs84_pos#&gt;
+SELECT ?id ?code ?latitude ?longitude WHERE {
+  {
+      ?id a po:PostcodeUnit;
+         spatial:within &lt;http://data.ordnancesurvey.co.uk/id/postcodedistrict/BA1&gt;;
+         geo:lat ?latitude;
+         geo:long ?longitude;
+         skos:notation ?code.
+  }
+  UNION
+  {
+      ?id a po:PostcodeUnit;
+         spatial:within &lt;http://data.ordnancesurvey.co.uk/id/postcodedistrict/BA2&gt;;
+         geo:lat ?latitude;
+         geo:long ?longitude;
+         skos:notation ?code.
+  }
+  
+}</code></pre></noscript></div>
+
+
+<p>If we submit that query to the <a href="http://api.talis.com/stores/ordnance-survey/services/sparql">OS SPARQL Endpoint</a> then extract just the data we need.</p>
+
+<p>Here&rsquo;s some simple Ruby code that does exactly that. It requests that the SPARQL API return the data as JSON and then spits it out as a simple CSV file.</p>
+
+<figure class='code'><figcaption><span>Postcodes to CSV </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s1">&#39;rubygems&#39;</span>
+</span><span class='line'><span class="nb">require</span> <span class="s1">&#39;json&#39;</span>
+</span><span class='line'><span class="nb">require</span> <span class="s1">&#39;net/http&#39;</span>
+</span><span class='line'><span class="nb">require</span> <span class="s1">&#39;cgi&#39;</span>
+</span><span class='line'><span class="nb">require</span> <span class="s1">&#39;csv&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">dir</span> <span class="o">=</span> <span class="no">File</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="bp">__FILE__</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">query</span> <span class="o">=</span> <span class="no">File</span><span class="o">.</span><span class="n">read</span><span class="p">(</span> <span class="no">File</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dir</span><span class="p">,</span> <span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;rq&quot;</span><span class="p">,</span> <span class="s2">&quot;list-bath-postcode-units.rq&quot;</span><span class="p">)</span> <span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="s1">&#39;api.talis.com&#39;</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">http</span><span class="o">|</span>
+</span><span class='line'>  <span class="n">req</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="o">::</span><span class="no">Get</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;/stores/ordnance-survey/services/sparql?output=json&amp;query=</span><span class="si">#{</span><span class="no">CGI</span><span class="o">.</span><span class="n">escape</span><span class="p">(</span><span class="n">query</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span class='line'>  <span class="n">response</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">req</span><span class="p">)</span>
+</span><span class='line'>  <span class="n">postcodes</span> <span class="o">=</span> <span class="no">JSON</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span> <span class="n">response</span><span class="o">.</span><span class="n">body</span> <span class="p">)</span>
+</span><span class='line'>  <span class="no">CSV</span><span class="o">.</span><span class="n">open</span><span class="p">(</span> <span class="no">File</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dir</span><span class="p">,</span> <span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;data&quot;</span><span class="p">,</span> <span class="s2">&quot;bath-postcodes.csv&quot;</span><span class="p">),</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">csv</span><span class="o">|</span>
+</span><span class='line'>    <span class="n">postcodes</span><span class="o">[</span><span class="s2">&quot;results&quot;</span><span class="o">][</span><span class="s2">&quot;bindings&quot;</span><span class="o">].</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">postcode</span><span class="o">|</span>
+</span><span class='line'>      <span class="n">csv</span> <span class="o">&lt;&lt;</span> <span class="o">[</span> <span class="n">postcode</span><span class="o">[</span><span class="s2">&quot;id&quot;</span><span class="o">][</span><span class="s2">&quot;value&quot;</span><span class="o">]</span><span class="p">,</span> <span class="n">postcode</span><span class="o">[</span><span class="s2">&quot;code&quot;</span><span class="o">][</span><span class="s2">&quot;value&quot;</span><span class="o">]</span><span class="p">,</span> <span class="n">postcode</span><span class="o">[</span><span class="s2">&quot;latitude&quot;</span><span class="o">][</span><span class="s2">&quot;value&quot;</span><span class="o">]</span><span class="p">,</span> <span class="n">postcode</span><span class="o">[</span><span class="s2">&quot;longitude&quot;</span><span class="o">][</span><span class="s2">&quot;value&quot;</span><span class="o">]</span> <span class="o">]</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Here&rsquo;s another version that generates a JSON description instead.</p>
+
+<figure class='code'><figcaption><span>Postcodes to JSON </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s1">&#39;rubygems&#39;</span>
+</span><span class='line'><span class="nb">require</span> <span class="s1">&#39;json&#39;</span>
+</span><span class='line'><span class="nb">require</span> <span class="s1">&#39;net/http&#39;</span>
+</span><span class='line'><span class="nb">require</span> <span class="s1">&#39;cgi&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">dir</span> <span class="o">=</span> <span class="no">File</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="bp">__FILE__</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">query</span> <span class="o">=</span> <span class="no">File</span><span class="o">.</span><span class="n">read</span><span class="p">(</span> <span class="no">File</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dir</span><span class="p">,</span> <span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;rq&quot;</span><span class="p">,</span> <span class="s2">&quot;list-bath-postcode-units.rq&quot;</span><span class="p">)</span> <span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="s1">&#39;api.talis.com&#39;</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">http</span><span class="o">|</span>
+</span><span class='line'>  <span class="n">req</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="o">::</span><span class="no">Get</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;/stores/ordnance-survey/services/sparql?output=json&amp;query=</span><span class="si">#{</span><span class="no">CGI</span><span class="o">.</span><span class="n">escape</span><span class="p">(</span><span class="n">query</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span class='line'>  <span class="n">response</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">req</span><span class="p">)</span>
+</span><span class='line'>  <span class="n">postcodes</span> <span class="o">=</span> <span class="no">JSON</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span> <span class="n">response</span><span class="o">.</span><span class="n">body</span> <span class="p">)</span>
+</span><span class='line'>  <span class="n">output</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>    <span class="s2">&quot;postcodes&quot;</span> <span class="o">=&gt;</span> <span class="p">{}</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>  <span class="n">postcodes</span><span class="o">[</span><span class="s2">&quot;results&quot;</span><span class="o">][</span><span class="s2">&quot;bindings&quot;</span><span class="o">].</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">postcode</span><span class="o">|</span>
+</span><span class='line'>    <span class="n">output</span><span class="o">[</span><span class="s2">&quot;postcodes&quot;</span><span class="o">][</span> <span class="o">[</span> <span class="n">postcode</span><span class="o">[</span><span class="s2">&quot;code&quot;</span><span class="o">][</span><span class="s2">&quot;value&quot;</span><span class="o">]</span> <span class="o">]</span> <span class="o">]</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>      <span class="s2">&quot;id&quot;</span> <span class="o">=&gt;</span> <span class="n">postcode</span><span class="o">[</span><span class="s2">&quot;id&quot;</span><span class="o">][</span><span class="s2">&quot;value&quot;</span><span class="o">]</span><span class="p">,</span>
+</span><span class='line'>      <span class="s2">&quot;latitude&quot;</span> <span class="o">=&gt;</span> <span class="n">postcode</span><span class="o">[</span><span class="s2">&quot;latitude&quot;</span><span class="o">][</span><span class="s2">&quot;value&quot;</span><span class="o">]</span><span class="p">,</span>
+</span><span class='line'>      <span class="s2">&quot;longitude&quot;</span> <span class="o">=&gt;</span> <span class="n">postcode</span><span class="o">[</span><span class="s2">&quot;longitude&quot;</span><span class="o">][</span><span class="s2">&quot;value&quot;</span><span class="o">]</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'>  <span class="no">File</span><span class="o">.</span><span class="n">open</span><span class="p">(</span> <span class="no">File</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dir</span><span class="p">,</span> <span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;data&quot;</span><span class="p">,</span> <span class="s2">&quot;bath-postcodes.json&quot;</span><span class="p">),</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">file</span><span class="o">|</span>
+</span><span class='line'>    <span class="n">file</span><span class="o">.</span><span class="n">puts</span> <span class="no">JSON</span><span class="o">.</span><span class="n">pretty_generate</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>And here are the generated files as both <a href="https://github.com/datasulis/bath-postcodes/raw/master/data/bath-postcodes.csv">CSV</a> and <a href="https://github.com/datasulis/bath-postcodes/raw/master/data/bath-postcodes.json">JSON</a>. Those files are provided to save you re-generating them yourself but you shouldn&rsquo;t assume they&rsquo;re always going to be up to date.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Leigh Dodds</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2012-03-27T14:06:00+01:00'><span class='date'><span class='date-month'>Mar</span> <span class='date-day'>27</span><span class='date-suffix'>th</span>, <span class='date-year'>2012</span></span> <span class='time'>2:06 pm</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/geography/'>geography</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://datasulis.github.io/blog/2012/03/27/bath-postcodes/" data-via="datasulis" data-counturl="http://datasulis.github.io/blog/2012/03/27/bath-postcodes/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/03/27/hello-bath-hackers/" title="Previous Post: Hello Bath Hackers">&laquo; Hello Bath Hackers</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2012/03/28/the-nhs-in-bath/" title="Next Post: The NHS in Bath">The NHS in Bath &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/09/06/bath-hacked/">Bath Hacked</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/03/29/how-you-can-help-yes/">How You Can Help. Yes, You!</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/03/28/house-price-data-from-the-land-registry/">House Price Data From the Land Registry</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/03/28/the-nhs-in-bath/">The NHS in Bath</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/03/27/bath-postcodes/">Bath Postcodes</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/datasulis">@datasulis</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'datasulis',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Leigh Dodds -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'datasulis';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://datasulis.github.io/blog/2012/03/27/bath-postcodes/';
+        var disqus_url = 'http://datasulis.github.io/blog/2012/03/27/bath-postcodes/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

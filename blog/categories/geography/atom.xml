@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: -geography | DataSulis]]></title>
+  <link href="http://datasulis.github.io/blog/categories/geography/atom.xml" rel="self"/>
+  <link href="http://datasulis.github.io/"/>
+  <updated>2014-09-06T08:46:55+01:00</updated>
+  <id>http://datasulis.github.io/</id>
+  <author>
+    <name><![CDATA[Leigh Dodds]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[House Price Data From the Land Registry]]></title>
+    <link href="http://datasulis.github.io/blog/2012/03/28/house-price-data-from-the-land-registry/"/>
+    <updated>2012-03-28T20:15:00+01:00</updated>
+    <id>http://datasulis.github.io/blog/2012/03/28/house-price-data-from-the-land-registry</id>
+    <content type="html"><![CDATA[<p>Like the Ordnance Survey, the Land Registry have recently started to <a href="http://www1.landregistry.gov.uk/market-trend-data/public-data">publish some Open Data</a>. That data includes statistics on transactions made against the Land Registry database as well as &ldquo;price paid&rdquo; data.</p>
+
+<p>As <a href="http://www1.landregistry.gov.uk/market-trend-data/price-paid-data">the Land Registry website explains</a>, this data relates to:</p>
+
+<blockquote><p>residential property sales in England and Wales that are lodged with us for registration. The data includes:</p>
+
+<ul>
+<li>the full address of the property (Primary addressable object name (PAON), Secondary addressable object name (SAON), street, postcode, locality (if available), town, district, county)</li>
+<li>the price paid for the property</li>
+<li>the date of transfer</li>
+<li>the property type (Detached, Semi, Terraced, Flat/Maisonette)</li>
+<li>whether the property is new build or not</li>
+<li>whether the property is freehold or leasehold.</li>
+</ul>
+</blockquote>
+
+<p>We can filter their data to grab just the Bath prices.</p>
+
+<!-- More -->
+
+
+<p>There is a simple script in <a href="https://github.com/datasulis/bath-house-prices">this github project</a> which looks at the Land Registry website and grabs whatever CSV files are available. The CSV files are then read and filtered to just grab the data that relates to properties in the BA1 and BA2 area.</p>
+
+<p>Currently the Land Registry are publishing this data on a monthly basis, so there is only a single month available currently. I expect that more data will appear over time. Here&rsquo;s <a href="https://github.com/datasulis/bath-house-prices/blob/master/data/bath-house-prices.csv">how it looks today</a>.</p>
+
+<p>For more background on the codes used in the data then <a href="http://www1.landregistry.gov.uk/market-trend-data/faqs#m18">read the Land Registry FAQ</a>.</p>
+]]></content>
+  </entry>
+  
+</feed>

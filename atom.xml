@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[DataSulis]]></title>
+  <link href="http://datasulis.github.io/atom.xml" rel="self"/>
+  <link href="http://datasulis.github.io/"/>
+  <updated>2014-09-06T08:46:55+01:00</updated>
+  <id>http://datasulis.github.io/</id>
+  <author>
+    <name><![CDATA[Leigh Dodds]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Bath Hacked]]></title>
+    <link href="http://datasulis.github.io/blog/2014/09/06/bath-hacked/"/>
+    <updated>2014-09-06T08:03:00+01:00</updated>
+    <id>http://datasulis.github.io/blog/2014/09/06/bath-hacked</id>
+    <content type="html"><![CDATA[<p>Its beeen over two years since I posted to this blog. At the time I had good intentions that I was going to post regularly and try my best to start an open data community here in Bath. Unfortunately, as always happens real life interviewed: a few months after this happened I changed job and became <a href="http://consulting.ldodds.com/">freelance</a> with the result that I had no time for side projects as I was taking on as much work as possible to get the business started.</p>
+
+<p>I&rsquo;ve never completely given up on the idea behind Data Sulis though. While I&rsquo;ve not had much time to do visible work I&rsquo;ve continued to research open datasets that might be useful to the local community. My work with the Open Data Institute and others has also given me some useful experience.</p>
+
+<p>I was about to kick-start this project again when I discovered <a href="http://www.bathhacked.org/">Bath: Hacked</a>. It turns out that I&rsquo;m not the only person passionate about open data in Bath and they&rsquo;ve been extremely busy!</p>
+
+<p>The <a href="http://twitter.com/BathHacked">@BathHacked</a> team have been working with B&amp;NES to open up some datasets. After a succcessful hack day early this year they&rsquo;ve now launched <a href="data.bathhacked.org">a beta data store based on Socrata</a>.</p>
+
+<p>As a result of this I&rsquo;ve been reworking the code in the <a href="https://github.com/datasulis">DataSulis github account</a> to add support for posting the data to Socrata. I&rsquo;ve also been spending time exploring the Socrata platform. I&rsquo;ve also agreed to help manage the BathHacked store to help people get the most out of it and ensure that the datasets are well-published.</p>
+
+<p>There&rsquo;s some interesting datasets in the store already, including some continuously updated air quality data taken from sensors around the city. B&amp;NES are now running an <a href="http://www.bathhacked.org/news/air-quality-hack-20-september/">air quality hack day</a> to encourage developers to use the data in the BathHacked store to build some interesting applications.</p>
+
+<p>While I&rsquo;ll be blogging on the Bath Hacked website and contributing to <a href="https://github.com/bathhacked">the BathHacked github project</a> I&rsquo;m going to revive this project and hopefully blog here a little more frequently. I&rsquo;ll be using it to publish my personal perspective on open data, investigations of useful datasets, and updates on my own hacking with local open data.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How You Can Help. Yes, You!]]></title>
+    <link href="http://datasulis.github.io/blog/2012/03/29/how-you-can-help-yes/"/>
+    <updated>2012-03-29T16:32:00+01:00</updated>
+    <id>http://datasulis.github.io/blog/2012/03/29/how-you-can-help-yes</id>
+    <content type="html"><![CDATA[<p>After I posted a link to this project on Twitter last night, there was some really encouraging feedback from the local community. Looks like there&rsquo;s some interest in a Bath based hackday and cider. Mainly cider in fact, but that&rsquo;s all good :)</p>
+
+<p>One question I got asked is: how do we move this forward? I thought I&rsquo;d post some ideas about next steps, as well as some suggestions for how people can get involved.</p>
+
+<!-- More -->
+
+
+<p>First of all though lets consider why we might want to collate some local data. There are a number of good reasons. The primary reason is to have free, Open Data that can be used to create some useful applications. Those app can be useful not just for local people, but also for the thousands of tourists that visit the city each year.</p>
+
+<p>Those applications could be built by local startups and provide a way for them to earn a few quid. The apps could also help local businesses increase their revenues, by driving attracting more customers. If we&rsquo;re provided with better data from the local council, or central government, we can all be better engaged and help it deliver better services to us.</p>
+
+<p>Open Data is pure win.</p>
+
+<p>With these kinds of uses in mind, what kinds of data might we want to collect:</p>
+
+<ul>
+<li>Government data &ndash; There&rsquo;s a whole range of potentially useful, interesting statistics published by central government, or by the likes of the <a href="http://www.dh.gov.uk/en/Publicationsandstatistics/Statistics/Performancedataandstatistics/">NHS</a>, that could be re-purposed for local use</li>
+<li>Local Government data &ndash; Planning applications, health &amp; safety inspections, etc.</li>
+<li>Business listings &ndash; How about a free, locally maintained database of local businesses, with contact details, up to date information on opening-closing times, twitter accounts, blogs, and calenders?</li>
+<li>Travel information &ndash; Bus and train times. Cycle paths</li>
+<li>News &ndash; Searchable indexes of news sourced both locally as well as from national newspapers, e.g. the Guardian</li>
+<li>Reviews &ndash; local restaurant, business, and event reviews</li>
+<li>Jobs &ndash; local job adverts</li>
+<li>Social Network &ndash; <a href="http://welovebath.co.uk">WeLoveBath</a> is becoming the focal point of Bath&rsquo;s social network. Who is in it and how do they connect up? What about Facebook, Foursquare, etc?</li>
+<li>Media &ndash; <a href="http://www.flickr.com/groups/bath/">Flickr</a> and <a href="http://www.geograph.org.uk">Geograph</a> are full of pictures of Bath. Wouldn&rsquo;t it be nice to have a dataset of Creative Commons licensed photos for use in local applications? Maybe to power a new kind of tourist guide? What about sound and video? Music?</li>
+<li>Events &ndash; There&rsquo;s a lot going on in Bath for a relatively small city. I&rsquo;d love to see a central database and calendar of events across the city, not just in the Theatre, or Komedia, but all of the pub nights, reading groups and other local events.</li>
+</ul>
+
+
+<p>&hellip;and there&rsquo;s a whole lot more. Cultural heritage, local walking routes, weather, etc. I&rsquo;ve even had crazy ideas about mapping out all the species of trees in the Arboretum in Victoria Bath. Maybe a school project?!</p>
+
+<p>So how can you (yes, you!) get involved?</p>
+
+<ul>
+<li>Are you a geek? Yes? Then why not:
+
+<ul>
+<li>Share some code showing how to query, collect or scrape some data together for other developers to build on? A lot of data is out there already, we just need to make it easier to find and access</li>
+<li>Use some of the data showcased here to create an useful application or visualisation?</li>
+<li>Help build an application or service to help crowd-source some data?</li>
+</ul>
+</li>
+<li>Are you a non-geek (aka Normal Person)? Then how about:
+
+<ul>
+<li>Sharing some thoughts on what kinds of local application or service you&rsquo;d like to see?</li>
+<li>Curating some data using a Google Spreadsheet? No coding required, but the data is still easy to share with others</li>
+</ul>
+</li>
+<li>Are you a local business or firm? Then how about:
+
+<ul>
+<li>Getting in touch to see how you could help share some of you data for others to use?</li>
+</ul>
+</li>
+</ul>
+
+
+<p>I&rsquo;ll happily point to whatever people hack, build, or share from this blog, just send in pointers. I&rsquo;ll try and showcase as much as possible whilst continuing to add more content and collated data myself.</p>
+
+<p>I&rsquo;m keen to take a lo-fi approach and just do the simplest things necessary to help collect some data and make it easily accessible to whoever needs it. There are lots of useful free tools available. For example <a href="http://www.google.com/google-d-s/forms/">Google Spreadsheet Forms</a> are a quick and dirty way to crowdsource some basic information.</p>
+
+<p>To really get things going I suggest we first try and collate some more data, and then maybe have a local hackday to try build something on what we&rsquo;ve collected. And/or have a focused hacking session to collect together even more data. Or both.</p>
+
+<p>Oh, and the cider. Don&rsquo;t forget the cider.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[House Price Data From the Land Registry]]></title>
+    <link href="http://datasulis.github.io/blog/2012/03/28/house-price-data-from-the-land-registry/"/>
+    <updated>2012-03-28T20:15:00+01:00</updated>
+    <id>http://datasulis.github.io/blog/2012/03/28/house-price-data-from-the-land-registry</id>
+    <content type="html"><![CDATA[<p>Like the Ordnance Survey, the Land Registry have recently started to <a href="http://www1.landregistry.gov.uk/market-trend-data/public-data">publish some Open Data</a>. That data includes statistics on transactions made against the Land Registry database as well as &ldquo;price paid&rdquo; data.</p>
+
+<p>As <a href="http://www1.landregistry.gov.uk/market-trend-data/price-paid-data">the Land Registry website explains</a>, this data relates to:</p>
+
+<blockquote><p>residential property sales in England and Wales that are lodged with us for registration. The data includes:</p>
+
+<ul>
+<li>the full address of the property (Primary addressable object name (PAON), Secondary addressable object name (SAON), street, postcode, locality (if available), town, district, county)</li>
+<li>the price paid for the property</li>
+<li>the date of transfer</li>
+<li>the property type (Detached, Semi, Terraced, Flat/Maisonette)</li>
+<li>whether the property is new build or not</li>
+<li>whether the property is freehold or leasehold.</li>
+</ul>
+</blockquote>
+
+<p>We can filter their data to grab just the Bath prices.</p>
+
+<!-- More -->
+
+
+<p>There is a simple script in <a href="https://github.com/datasulis/bath-house-prices">this github project</a> which looks at the Land Registry website and grabs whatever CSV files are available. The CSV files are then read and filtered to just grab the data that relates to properties in the BA1 and BA2 area.</p>
+
+<p>Currently the Land Registry are publishing this data on a monthly basis, so there is only a single month available currently. I expect that more data will appear over time. Here&rsquo;s <a href="https://github.com/datasulis/bath-house-prices/blob/master/data/bath-house-prices.csv">how it looks today</a>.</p>
+
+<p>For more background on the codes used in the data then <a href="http://www1.landregistry.gov.uk/market-trend-data/faqs#m18">read the Land Registry FAQ</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[The NHS in Bath]]></title>
+    <link href="http://datasulis.github.io/blog/2012/03/28/the-nhs-in-bath/"/>
+    <updated>2012-03-28T19:20:00+01:00</updated>
+    <id>http://datasulis.github.io/blog/2012/03/28/the-nhs-in-bath</id>
+    <content type="html"><![CDATA[<p>The <a href="http://www.connectingforhealth.nhs.uk/systemsandservices/data/ods">NHS Organisation Data Service</a> has a responsibility to help various parts of the NHS, and affiliated organisations, exchange information as efficiently as possible. Part of that activity involves maintaining a database of organisations relevant to the NHS. That includes everything from NHS Primary Care Trusts through to individual Pharmacies.</p>
+
+<p>Their data is published under the Open Government License so can be freely reused. Lets take a look at what it contains and how we can grab a local extract.</p>
+
+<!-- More -->
+
+
+<p>If you visit the <a href="http://www.connectingforhealth.nhs.uk/systemsandservices/data/ods">ODS Website</a> you can see that they publish a large number of CSV files that contain data about organisations and their relationships. The structure of the CSV files is well-documented and the files are well-normalised so they&rsquo;re easy to process.</p>
+
+<p>Some of the data is <a href="http://www.connectingforhealth.nhs.uk/systemsandservices/data/ods/datafiles">updated on a weekly basis</a>. This is the core NHS organisational data. Other data, such as that <a href="http://www.connectingforhealth.nhs.uk/systemsandservices/data/ods/genmedpracs">listing GPs and Branch Surgeries</a> is updated less frequently.</p>
+
+<p>The data is useful for two reasons:</p>
+
+<ul>
+<li>If you want to draw maps showing, e.g. location of pharmacies then there&rsquo;s well normalised address data that can be geocoded.</li>
+<li>If you want to link up government statistics with individual medical practices or service providers, then you&rsquo;ll need the unique identifiers</li>
+</ul>
+
+
+<p>I&rsquo;ve previously taken all of the ODS data and <a href="http://kasabi.com/dataset/nhs-organization">loaded it into Kasabi</a>. Kasabi is my day job: its a data marketplace for hosting and publish data. If you want to query the data online then you could use any of the range of APIs available from there. Sign-up is free.</p>
+
+<p>For the purposes of the DataSulis project we&rsquo;re only really interested in the data about the NHS in Bath, i.e. BA1 and BA2. I wrote <a href="https://github.com/datasulis/bath-nhs">some Ruby scripts</a> to download the latest ODS files and then extract those organisations that have the relevant postcodes. The filtered CSV files are then cached locally. You could use them as the basis for further processing.</p>
+
+<p>To illustrate the output I&rsquo;ve put <a href="https://github.com/datasulis/bath-nhs/tree/master/data">a snapshot of the data into github too</a>. For example here&rsquo;s a CSV file containing a list of the <a href="https://github.com/datasulis/bath-nhs/blob/master/data/nhs-ods-egdpprac.csv">Dental Practices in Bath</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Bath Postcodes]]></title>
+    <link href="http://datasulis.github.io/blog/2012/03/27/bath-postcodes/"/>
+    <updated>2012-03-27T14:06:00+01:00</updated>
+    <id>http://datasulis.github.io/blog/2012/03/27/bath-postcodes</id>
+    <content type="html"><![CDATA[<p>If we&rsquo;re going to be working with local data then it makes sense to have a list of local postcodes. There&rsquo;s all kinds of data that can be usefully linked or combined based on postcode information. For example you could aggregate statistics on crime rates or house prices. Happily the Ordnance Survey now publish some useful Open Data about UK postcodes.</p>
+
+<p>So lets look at how we can work with their data to query it and extract it for local use.</p>
+
+<!--More-->
+
+
+<p>Here&rsquo;s a quick primer on postcodes. Postcodes have a structure to them. Each of the different parts of a postcode refer to a different area and those areas have a hierarchical relationship. Here are some examples along with the name that the Ordnance Survey (OS) uses to describe them:</p>
+
+<ul>
+<li><a href="http://data.ordnancesurvey.co.uk/id/postcodearea/BA">BA</a> = Post Code Area</li>
+<li><a href="http://data.ordnancesurvey.co.uk/id/postcodedistrict/BA2">BA2</a> = Post Code District</li>
+<li><a href="http://data.ordnancesurvey.co.uk/id/postcodesector/BA23">BA2 3</a> = Post Code Sector</li>
+<li><a href="http://data.ordnancesurvey.co.uk/id/postcodeunit/BA23PL">BA2 3PL</a> = Post Code Unit</li>
+</ul>
+
+
+<p>So &ldquo;BA2 3PL&rdquo; is within a sector called &ldquo;BA2 3&rdquo;, and so on. The OS publish their data in various ways, including as <a href="http://en.wikipedia.org/Linked_Data">Linked Data</a>. Without going into details, Linked Data is just a way to publish data to the web by giving everything a unique URL.</p>
+
+<p>So based on a postcode or part of a postcode you can build a URL to the OS website and use it to grab some data. For example here&rsquo;s <a href="http://data.ordnancesurvey.co.uk/doc/postcodeunit/BA23PL.json">a JSON description of BA23PL</a>. That means that you can quickly lookup some useful data such as the lat/long which is the centre of a post code, or to discover in which electoral ward it lies. More on those alternate geographic regions in another post.</p>
+
+<p>Sometimes though you just want a to grab some data for local processing. Having a list of local postcodes can help drive some address matching or other data processing task. So how can we get a complete list of local postcodes?</p>
+
+<p>The OS allow you to <a href="http://www.ordnancesurvey.co.uk/oswebsite/products/os-opendata.html">download data from their site</a>, so you could grab all of the postcode dataset and process it to extract what you need. But there&rsquo;s a simpler way. The OS also provide an API called a &ldquo;SPARQL Endpoint&rdquo; for their data. SPARQL is a query language for working with RDF, its basically a way to query a graph of Linked Data to extract the bits you need.</p>
+
+<p>Here&rsquo;s a SPARQL query that will fetch data about all of the Post Code Units that are within the BA1 or BA2 Post Code Districts:</p>
+
+<div><script src='https://gist.github.com/2220182.js'></script>
+<noscript><pre><code>PREFIX po: &lt;http://data.ordnancesurvey.co.uk/ontology/postcode/&gt;
+PREFIX spatial: &lt;http://data.ordnancesurvey.co.uk/ontology/spatialrelations/&gt;
+PREFIX skos: &lt;http://www.w3.org/2004/02/skos/core#&gt;
+PREFIX geo: &lt;http://www.w3.org/2003/01/geo/wgs84_pos#&gt;
+SELECT ?id ?code ?latitude ?longitude WHERE {
+  {
+      ?id a po:PostcodeUnit;
+         spatial:within &lt;http://data.ordnancesurvey.co.uk/id/postcodedistrict/BA1&gt;;
+         geo:lat ?latitude;
+         geo:long ?longitude;
+         skos:notation ?code.
+  }
+  UNION
+  {
+      ?id a po:PostcodeUnit;
+         spatial:within &lt;http://data.ordnancesurvey.co.uk/id/postcodedistrict/BA2&gt;;
+         geo:lat ?latitude;
+         geo:long ?longitude;
+         skos:notation ?code.
+  }
+  
+}</code></pre></noscript></div>
+
+
+<p>If we submit that query to the <a href="http://api.talis.com/stores/ordnance-survey/services/sparql">OS SPARQL Endpoint</a> then extract just the data we need.</p>
+
+<p>Here&rsquo;s some simple Ruby code that does exactly that. It requests that the SPARQL API return the data as JSON and then spits it out as a simple CSV file.</p>
+
+<figure class='code'><figcaption><span>Postcodes to CSV </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s1">&#39;rubygems&#39;</span>
+</span><span class='line'><span class="nb">require</span> <span class="s1">&#39;json&#39;</span>
+</span><span class='line'><span class="nb">require</span> <span class="s1">&#39;net/http&#39;</span>
+</span><span class='line'><span class="nb">require</span> <span class="s1">&#39;cgi&#39;</span>
+</span><span class='line'><span class="nb">require</span> <span class="s1">&#39;csv&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">dir</span> <span class="o">=</span> <span class="no">File</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="bp">__FILE__</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">query</span> <span class="o">=</span> <span class="no">File</span><span class="o">.</span><span class="n">read</span><span class="p">(</span> <span class="no">File</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dir</span><span class="p">,</span> <span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;rq&quot;</span><span class="p">,</span> <span class="s2">&quot;list-bath-postcode-units.rq&quot;</span><span class="p">)</span> <span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="s1">&#39;api.talis.com&#39;</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">http</span><span class="o">|</span>
+</span><span class='line'>  <span class="n">req</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="o">::</span><span class="no">Get</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;/stores/ordnance-survey/services/sparql?output=json&amp;query=</span><span class="si">#{</span><span class="no">CGI</span><span class="o">.</span><span class="n">escape</span><span class="p">(</span><span class="n">query</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span class='line'>  <span class="n">response</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">req</span><span class="p">)</span>
+</span><span class='line'>  <span class="n">postcodes</span> <span class="o">=</span> <span class="no">JSON</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span> <span class="n">response</span><span class="o">.</span><span class="n">body</span> <span class="p">)</span>
+</span><span class='line'>  <span class="no">CSV</span><span class="o">.</span><span class="n">open</span><span class="p">(</span> <span class="no">File</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dir</span><span class="p">,</span> <span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;data&quot;</span><span class="p">,</span> <span class="s2">&quot;bath-postcodes.csv&quot;</span><span class="p">),</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">csv</span><span class="o">|</span>
+</span><span class='line'>    <span class="n">postcodes</span><span class="o">[</span><span class="s2">&quot;results&quot;</span><span class="o">][</span><span class="s2">&quot;bindings&quot;</span><span class="o">].</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">postcode</span><span class="o">|</span>
+</span><span class='line'>      <span class="n">csv</span> <span class="o">&lt;&lt;</span> <span class="o">[</span> <span class="n">postcode</span><span class="o">[</span><span class="s2">&quot;id&quot;</span><span class="o">][</span><span class="s2">&quot;value&quot;</span><span class="o">]</span><span class="p">,</span> <span class="n">postcode</span><span class="o">[</span><span class="s2">&quot;code&quot;</span><span class="o">][</span><span class="s2">&quot;value&quot;</span><span class="o">]</span><span class="p">,</span> <span class="n">postcode</span><span class="o">[</span><span class="s2">&quot;latitude&quot;</span><span class="o">][</span><span class="s2">&quot;value&quot;</span><span class="o">]</span><span class="p">,</span> <span class="n">postcode</span><span class="o">[</span><span class="s2">&quot;longitude&quot;</span><span class="o">][</span><span class="s2">&quot;value&quot;</span><span class="o">]</span> <span class="o">]</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Here&rsquo;s another version that generates a JSON description instead.</p>
+
+<figure class='code'><figcaption><span>Postcodes to JSON </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s1">&#39;rubygems&#39;</span>
+</span><span class='line'><span class="nb">require</span> <span class="s1">&#39;json&#39;</span>
+</span><span class='line'><span class="nb">require</span> <span class="s1">&#39;net/http&#39;</span>
+</span><span class='line'><span class="nb">require</span> <span class="s1">&#39;cgi&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">dir</span> <span class="o">=</span> <span class="no">File</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="bp">__FILE__</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">query</span> <span class="o">=</span> <span class="no">File</span><span class="o">.</span><span class="n">read</span><span class="p">(</span> <span class="no">File</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dir</span><span class="p">,</span> <span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;rq&quot;</span><span class="p">,</span> <span class="s2">&quot;list-bath-postcode-units.rq&quot;</span><span class="p">)</span> <span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="s1">&#39;api.talis.com&#39;</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">http</span><span class="o">|</span>
+</span><span class='line'>  <span class="n">req</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="o">::</span><span class="no">Get</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;/stores/ordnance-survey/services/sparql?output=json&amp;query=</span><span class="si">#{</span><span class="no">CGI</span><span class="o">.</span><span class="n">escape</span><span class="p">(</span><span class="n">query</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span class='line'>  <span class="n">response</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">req</span><span class="p">)</span>
+</span><span class='line'>  <span class="n">postcodes</span> <span class="o">=</span> <span class="no">JSON</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span> <span class="n">response</span><span class="o">.</span><span class="n">body</span> <span class="p">)</span>
+</span><span class='line'>  <span class="n">output</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>    <span class="s2">&quot;postcodes&quot;</span> <span class="o">=&gt;</span> <span class="p">{}</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>  <span class="n">postcodes</span><span class="o">[</span><span class="s2">&quot;results&quot;</span><span class="o">][</span><span class="s2">&quot;bindings&quot;</span><span class="o">].</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">postcode</span><span class="o">|</span>
+</span><span class='line'>    <span class="n">output</span><span class="o">[</span><span class="s2">&quot;postcodes&quot;</span><span class="o">][</span> <span class="o">[</span> <span class="n">postcode</span><span class="o">[</span><span class="s2">&quot;code&quot;</span><span class="o">][</span><span class="s2">&quot;value&quot;</span><span class="o">]</span> <span class="o">]</span> <span class="o">]</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>      <span class="s2">&quot;id&quot;</span> <span class="o">=&gt;</span> <span class="n">postcode</span><span class="o">[</span><span class="s2">&quot;id&quot;</span><span class="o">][</span><span class="s2">&quot;value&quot;</span><span class="o">]</span><span class="p">,</span>
+</span><span class='line'>      <span class="s2">&quot;latitude&quot;</span> <span class="o">=&gt;</span> <span class="n">postcode</span><span class="o">[</span><span class="s2">&quot;latitude&quot;</span><span class="o">][</span><span class="s2">&quot;value&quot;</span><span class="o">]</span><span class="p">,</span>
+</span><span class='line'>      <span class="s2">&quot;longitude&quot;</span> <span class="o">=&gt;</span> <span class="n">postcode</span><span class="o">[</span><span class="s2">&quot;longitude&quot;</span><span class="o">][</span><span class="s2">&quot;value&quot;</span><span class="o">]</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'>  <span class="no">File</span><span class="o">.</span><span class="n">open</span><span class="p">(</span> <span class="no">File</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dir</span><span class="p">,</span> <span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;data&quot;</span><span class="p">,</span> <span class="s2">&quot;bath-postcodes.json&quot;</span><span class="p">),</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">file</span><span class="o">|</span>
+</span><span class='line'>    <span class="n">file</span><span class="o">.</span><span class="n">puts</span> <span class="no">JSON</span><span class="o">.</span><span class="n">pretty_generate</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>And here are the generated files as both <a href="https://github.com/datasulis/bath-postcodes/raw/master/data/bath-postcodes.csv">CSV</a> and <a href="https://github.com/datasulis/bath-postcodes/raw/master/data/bath-postcodes.json">JSON</a>. Those files are provided to save you re-generating them yourself but you shouldn&rsquo;t assume they&rsquo;re always going to be up to date.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Hello Bath Hackers]]></title>
+    <link href="http://datasulis.github.io/blog/2012/03/27/hello-bath-hackers/"/>
+    <updated>2012-03-27T13:44:00+01:00</updated>
+    <id>http://datasulis.github.io/blog/2012/03/27/hello-bath-hackers</id>
+    <content type="html"><![CDATA[<p>First post!</p>
+
+<p>This site is an experiment in creating a collection of useful pointers, blog posts, datasets and maybe even APIs for local hackers in Bath. As I&rsquo;ve explained a little in the <a href="http://datasulis.org/about">about</a> page I&rsquo;m interested in exploring how a more local, city level view of Open Data could help support some interesting innovative hacking amongst the local geek community.</p>
+
+<p>As the recent [Bath Digital Festival] has shown Bath has developed a really amazing local tech community. [WeLoveBath] also shows that Bath has a great community of engaged citizens. But I&rsquo;ve not seen any efforts to start curating local datasets that can help both of those communities do interesting, innovative things in our local area.</p>
+
+<p>This site sets out to see if we can remedy that. Basically, I&rsquo;ve spent a lot of time over the last few years doing data modelling and munging and I decided its time to use those skills for good :)</p>
+
+<p>I expect this will be something of a journey and I&rsquo;m hoping that some of you out there will want to join in and help out. I&rsquo;m hoping that if its successful then maybe we can run a BathCamp or hackday dedicated to local data projects.</p>
+
+<p>It doesn&rsquo;t matter if your a geek or not I&rsquo;m hoping that we can explore lots of ways to curate and collect local data. I&rsquo;m as interested in running some local crowd-sourcing experiments as I am in wrangling data from various APIs.</p>
+
+<p>The project is intended to be open from top to bottom, so all of the content, source code and data should be up for re-use.</p>
+
+<p>Lets see what we can make.</p>
+]]></content>
+  </entry>
+  
+</feed>

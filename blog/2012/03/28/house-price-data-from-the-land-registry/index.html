@@ -1,0 +1,281 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>House Price Data From the Land Registry - DataSulis</title>
+  <meta name="author" content="Leigh Dodds">
+
+  
+  <meta name="description" content="Like the Ordnance Survey, the Land Registry have recently started to publish some Open Data. That data includes statistics on transactions made &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://datasulis.github.io/blog/2012/03/28/house-price-data-from-the-land-registry">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="DataSulis" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">DataSulis</a></h1>
+  
+    <h2>Curating local data for local people. In Bath.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:datasulis.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">House Price Data From the Land Registry</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2012-03-28T20:15:00+01:00'><span class='date'><span class='date-month'>Mar</span> <span class='date-day'>28</span><span class='date-suffix'>th</span>, <span class='date-year'>2012</span></span> <span class='time'>8:15 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Like the Ordnance Survey, the Land Registry have recently started to <a href="http://www1.landregistry.gov.uk/market-trend-data/public-data">publish some Open Data</a>. That data includes statistics on transactions made against the Land Registry database as well as &ldquo;price paid&rdquo; data.</p>
+
+<p>As <a href="http://www1.landregistry.gov.uk/market-trend-data/price-paid-data">the Land Registry website explains</a>, this data relates to:</p>
+
+<blockquote><p>residential property sales in England and Wales that are lodged with us for registration. The data includes:</p>
+
+<ul>
+<li>the full address of the property (Primary addressable object name (PAON), Secondary addressable object name (SAON), street, postcode, locality (if available), town, district, county)</li>
+<li>the price paid for the property</li>
+<li>the date of transfer</li>
+<li>the property type (Detached, Semi, Terraced, Flat/Maisonette)</li>
+<li>whether the property is new build or not</li>
+<li>whether the property is freehold or leasehold.</li>
+</ul>
+</blockquote>
+
+<p>We can filter their data to grab just the Bath prices.</p>
+
+<!-- More -->
+
+
+<p>There is a simple script in <a href="https://github.com/datasulis/bath-house-prices">this github project</a> which looks at the Land Registry website and grabs whatever CSV files are available. The CSV files are then read and filtered to just grab the data that relates to properties in the BA1 and BA2 area.</p>
+
+<p>Currently the Land Registry are publishing this data on a monthly basis, so there is only a single month available currently. I expect that more data will appear over time. Here&rsquo;s <a href="https://github.com/datasulis/bath-house-prices/blob/master/data/bath-house-prices.csv">how it looks today</a>.</p>
+
+<p>For more background on the codes used in the data then <a href="http://www1.landregistry.gov.uk/market-trend-data/faqs#m18">read the Land Registry FAQ</a>.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Leigh Dodds</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2012-03-28T20:15:00+01:00'><span class='date'><span class='date-month'>Mar</span> <span class='date-day'>28</span><span class='date-suffix'>th</span>, <span class='date-year'>2012</span></span> <span class='time'>8:15 pm</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/geography/'>-geography</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://datasulis.github.io/blog/2012/03/28/house-price-data-from-the-land-registry/" data-via="datasulis" data-counturl="http://datasulis.github.io/blog/2012/03/28/house-price-data-from-the-land-registry/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/03/28/the-nhs-in-bath/" title="Previous Post: The NHS in Bath">&laquo; The NHS in Bath</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2012/03/29/how-you-can-help-yes/" title="Next Post: How you can help. Yes, You!">How you can help. Yes, You! &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/09/06/bath-hacked/">Bath Hacked</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/03/29/how-you-can-help-yes/">How You Can Help. Yes, You!</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/03/28/house-price-data-from-the-land-registry/">House Price Data From the Land Registry</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/03/28/the-nhs-in-bath/">The NHS in Bath</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/03/27/bath-postcodes/">Bath Postcodes</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/datasulis">@datasulis</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'datasulis',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Leigh Dodds -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'datasulis';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://datasulis.github.io/blog/2012/03/28/house-price-data-from-the-land-registry/';
+        var disqus_url = 'http://datasulis.github.io/blog/2012/03/28/house-price-data-from-the-land-registry/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

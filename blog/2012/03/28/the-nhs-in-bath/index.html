@@ -1,0 +1,279 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>The NHS in Bath - DataSulis</title>
+  <meta name="author" content="Leigh Dodds">
+
+  
+  <meta name="description" content="The NHS Organisation Data Service has a responsibility to help various parts of the NHS, and affiliated organisations, exchange information as &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://datasulis.github.io/blog/2012/03/28/the-nhs-in-bath">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="DataSulis" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">DataSulis</a></h1>
+  
+    <h2>Curating local data for local people. In Bath.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:datasulis.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">The NHS in Bath</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2012-03-28T19:20:00+01:00'><span class='date'><span class='date-month'>Mar</span> <span class='date-day'>28</span><span class='date-suffix'>th</span>, <span class='date-year'>2012</span></span> <span class='time'>7:20 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>The <a href="http://www.connectingforhealth.nhs.uk/systemsandservices/data/ods">NHS Organisation Data Service</a> has a responsibility to help various parts of the NHS, and affiliated organisations, exchange information as efficiently as possible. Part of that activity involves maintaining a database of organisations relevant to the NHS. That includes everything from NHS Primary Care Trusts through to individual Pharmacies.</p>
+
+<p>Their data is published under the Open Government License so can be freely reused. Lets take a look at what it contains and how we can grab a local extract.</p>
+
+<!-- More -->
+
+
+<p>If you visit the <a href="http://www.connectingforhealth.nhs.uk/systemsandservices/data/ods">ODS Website</a> you can see that they publish a large number of CSV files that contain data about organisations and their relationships. The structure of the CSV files is well-documented and the files are well-normalised so they&rsquo;re easy to process.</p>
+
+<p>Some of the data is <a href="http://www.connectingforhealth.nhs.uk/systemsandservices/data/ods/datafiles">updated on a weekly basis</a>. This is the core NHS organisational data. Other data, such as that <a href="http://www.connectingforhealth.nhs.uk/systemsandservices/data/ods/genmedpracs">listing GPs and Branch Surgeries</a> is updated less frequently.</p>
+
+<p>The data is useful for two reasons:</p>
+
+<ul>
+<li>If you want to draw maps showing, e.g. location of pharmacies then there&rsquo;s well normalised address data that can be geocoded.</li>
+<li>If you want to link up government statistics with individual medical practices or service providers, then you&rsquo;ll need the unique identifiers</li>
+</ul>
+
+
+<p>I&rsquo;ve previously taken all of the ODS data and <a href="http://kasabi.com/dataset/nhs-organization">loaded it into Kasabi</a>. Kasabi is my day job: its a data marketplace for hosting and publish data. If you want to query the data online then you could use any of the range of APIs available from there. Sign-up is free.</p>
+
+<p>For the purposes of the DataSulis project we&rsquo;re only really interested in the data about the NHS in Bath, i.e. BA1 and BA2. I wrote <a href="https://github.com/datasulis/bath-nhs">some Ruby scripts</a> to download the latest ODS files and then extract those organisations that have the relevant postcodes. The filtered CSV files are then cached locally. You could use them as the basis for further processing.</p>
+
+<p>To illustrate the output I&rsquo;ve put <a href="https://github.com/datasulis/bath-nhs/tree/master/data">a snapshot of the data into github too</a>. For example here&rsquo;s a CSV file containing a list of the <a href="https://github.com/datasulis/bath-nhs/blob/master/data/nhs-ods-egdpprac.csv">Dental Practices in Bath</a></p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Leigh Dodds</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2012-03-28T19:20:00+01:00'><span class='date'><span class='date-month'>Mar</span> <span class='date-day'>28</span><span class='date-suffix'>th</span>, <span class='date-year'>2012</span></span> <span class='time'>7:20 pm</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/geography/'>geography</a>, <a class='category' href='/blog/categories/health/'>health</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://datasulis.github.io/blog/2012/03/28/the-nhs-in-bath/" data-via="datasulis" data-counturl="http://datasulis.github.io/blog/2012/03/28/the-nhs-in-bath/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/03/27/bath-postcodes/" title="Previous Post: Bath Postcodes">&laquo; Bath Postcodes</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2012/03/28/house-price-data-from-the-land-registry/" title="Next Post: House Price Data from the Land Registry">House Price Data from the Land Registry &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/09/06/bath-hacked/">Bath Hacked</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/03/29/how-you-can-help-yes/">How You Can Help. Yes, You!</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/03/28/house-price-data-from-the-land-registry/">House Price Data From the Land Registry</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/03/28/the-nhs-in-bath/">The NHS in Bath</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/03/27/bath-postcodes/">Bath Postcodes</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/datasulis">@datasulis</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'datasulis',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Leigh Dodds -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'datasulis';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://datasulis.github.io/blog/2012/03/28/the-nhs-in-bath/';
+        var disqus_url = 'http://datasulis.github.io/blog/2012/03/28/the-nhs-in-bath/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
