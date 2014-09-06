@@ -12,7 +12,7 @@ I've never completely given up on the idea behind Data Sulis though. While I've 
 
 I was about to kick-start this project again when I discovered [Bath: Hacked](http://www.bathhacked.org/). It turns out that I'm not the only person passionate about open data in Bath and they've been extremely busy!
 
-The [@BathHacked](http://twitter.com/BathHacked) team have been working with B&NES to open up some datasets. After a succcessful hack day early this year they've now launched [a beta data store based on Socrata](data.bathhacked.org).
+The [@BathHacked](http://twitter.com/BathHacked) team have been working with B&NES to open up some datasets. After a succcessful hack day early this year they've now launched [a beta data store based on Socrata](http://data.bathhacked.org).
 
 As a result of this I've been reworking the code in the [DataSulis github account](https://github.com/datasulis) to add support for posting the data to Socrata. I've also been spending time exploring the Socrata platform. I've also agreed to help manage the BathHacked store to help people get the most out of it and ensure that the datasets are well-published.
 
