@@ -4,7 +4,7 @@
   <title><![CDATA[DataSulis]]></title>
   <link href="http://datasulis.github.io/atom.xml" rel="self"/>
   <link href="http://datasulis.github.io/"/>
-  <updated>2014-09-06T08:46:55+01:00</updated>
+  <updated>2014-09-06T09:25:17+01:00</updated>
   <id>http://datasulis.github.io/</id>
   <author>
     <name><![CDATA[Leigh Dodds]]></name>
@@ -24,7 +24,7 @@
 
 <p>I was about to kick-start this project again when I discovered <a href="http://www.bathhacked.org/">Bath: Hacked</a>. It turns out that I&rsquo;m not the only person passionate about open data in Bath and they&rsquo;ve been extremely busy!</p>
 
-<p>The <a href="http://twitter.com/BathHacked">@BathHacked</a> team have been working with B&amp;NES to open up some datasets. After a succcessful hack day early this year they&rsquo;ve now launched <a href="data.bathhacked.org">a beta data store based on Socrata</a>.</p>
+<p>The <a href="http://twitter.com/BathHacked">@BathHacked</a> team have been working with B&amp;NES to open up some datasets. After a succcessful hack day early this year they&rsquo;ve now launched <a href="http://data.bathhacked.org">a beta data store based on Socrata</a>.</p>
 
 <p>As a result of this I&rsquo;ve been reworking the code in the <a href="https://github.com/datasulis">DataSulis github account</a> to add support for posting the data to Socrata. I&rsquo;ve also been spending time exploring the Socrata platform. I&rsquo;ve also agreed to help manage the BathHacked store to help people get the most out of it and ensure that the datasets are well-published.</p>
 
