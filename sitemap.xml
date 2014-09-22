@@ -3,6 +3,14 @@
   
   
   <url>
+    <loc>http://datasulis.github.io/blog/2014/09/22/you-know-nothing-jon-snow/</loc>
+    
+    <lastmod>2014-09-22T20:00:00+01:00</lastmod>
+    
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
     <loc>http://datasulis.github.io/blog/2014/09/06/exploring-a-bath-chronicle-house-price-story/</loc>
     
     <lastmod>2014-09-06T11:01:32+01:00</lastmod>
@@ -61,14 +69,14 @@
   
   <url>
     <loc>http://datasulis.github.io/blog/archives/</loc>
-    <lastmod>2014-09-06T12:24:26+01:00</lastmod>
+    <lastmod>2014-09-22T20:37:29+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://datasulis.github.io/</loc>
-    <lastmod>2014-09-06T12:24:26+01:00</lastmod>
+    <lastmod>2014-09-22T20:37:29+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>

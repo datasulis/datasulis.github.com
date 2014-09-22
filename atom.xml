@@ -4,7 +4,7 @@
   <title><![CDATA[DataSulis]]></title>
   <link href="http://datasulis.github.io/atom.xml" rel="self"/>
   <link href="http://datasulis.github.io/"/>
-  <updated>2014-09-06T12:24:26+01:00</updated>
+  <updated>2014-09-22T20:37:29+01:00</updated>
   <id>http://datasulis.github.io/</id>
   <author>
     <name><![CDATA[Leigh Dodds]]></name>
@@ -12,6 +12,56 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[You Know Nothing Jon Sno<sub>x</sub>w]]></title>
+    <link href="http://datasulis.github.io/blog/2014/09/22/you-know-nothing-jon-snow/"/>
+    <updated>2014-09-22T20:00:00+01:00</updated>
+    <id>http://datasulis.github.io/blog/2014/09/22/you-know-nothing-jon-snow</id>
+    <content type="html"><![CDATA[<p>This blog post has the best game of thrones/weather/air quality joke you&rsquo;ll read all day. It also has some notes on what I built at <a href="http://www.bathhacked.org/news/air-quality-hack-20-september/">the BathHacked Air Quality hackday</a>.</p>
+
+<!-- More -->
+
+
+<p>Going into the hackday I realised several things.</p>
+
+<p><img src="http://datasulis.github.io/images/jon-snow.jpg" alt="My helpful screenshot" /></p>
+
+<p>Firstly, there was a lot of data available. BANES council had made an archive of <a href="https://data.bathhacked.org/Environment/Historical-Air-Quality-Sensor-Data/37nn-vnib">13 years of air quality data available</a>. I&rsquo;d also discovered that <a href="http://uk-air.defra.gov.uk/networks/site-info?uka_id=UKA00306">the DEFRA Air Quality data archive had data for one sensor</a> dating from 1997. That&rsquo;s a lot of data to get to grips with. I decided that I was going to focus on trying to summarise the dataset rather than build anything on top of it.</p>
+
+<p>Secondly, I also didn&rsquo;t really know anything about air quality. To get prepared I <a href="http://www.bathhacked.org/datastore/air-quality-fast-start/">produced some documentation for everyone attending the hackday</a> that summarised the main data source, and provided some useful pointers. I also did some reading around on both the BANES and <a href="http://uk-air.defra.gov.uk/">UK-AIR</a> websites.</p>
+
+<p>Air quality data analysis is a complex area. There are a lot of factors to take into account including a variety of sources of pollutants, complex interactions between pollutants and impacts from the prevailing weather conditions. BANES publish some summary reports but while informative they didn&rsquo;t really give me a sense of where the pollution was coming from, or how bad it was at different types of the day or year.</p>
+
+<p>I also discovered the <a href="http://www.openair-project.org/">Open Air</a> project which provides an <a href="http://www.r-project.org/">R</a> package to support air quality analysis. It also comes with an amazing set of documentation: the manual is over 200 pages and includes a short introduction to R.</p>
+
+<p>So I read the manual and went into the hack day with a goal of trying to answer two questions:</p>
+
+<ol>
+<li>Can we provide Bath citizens with more insight into the air quality for Bath?</li>
+<li>Can we provide the local council with new ways to generate meaningful visualisations and summary reports?</li>
+</ol>
+
+
+<p>I didn&rsquo;t get as far as I&rsquo;d hoped, but I managed to do enough to create what I think is <a href="http://datasulis.org/air-quality-report/london-road-aurn.html">an interesting summary of the data</a>.</p>
+
+<p>Using R and <code>openair</code> I was able to quickly import, normalise and explore the data. In fact R makes it so easy to generate diagrams that I spent a lot of the day just <a href="http://treasure.diylol.com/uploads/post/image/587658/resized_all-the-things-meme-generator-graph-all-the-things-9ec157.jpg">playing with graphs</a>.</p>
+
+<p>The judges also liked the results and I was lucky enough to <a href="http://www.bathhacked.org/news/and-the-results-are-in/">win the Most Educational Project prize</a>. The report is now <a href="http://www.bathnes.gov.uk/services/your-council-and-democracy/local-research-and-statistics/wiki/historic-air-quality">featured on the BANES website</a>.</p>
+
+<p>I&rsquo;ve also <a href="https://github.com/datasulis/air-quality-report">published the code on github</a> if you&rsquo;d like to explore. The main report code could easily be customised to use an alternate DEFRA location if you want to try it on some data from your local area.</p>
+
+<p>There&rsquo;s more to explore here, not just around the data analysis, but also around the concept of having reproducable data analytics.</p>
+
+<p>Reproducability is an important part of scientific research and analysis. At least one driver of the growing adoption of open source and open data in the research community is to make science more reproducable: it should be possible for someone else to pick up your research to easily check the results and maybe go a step further.</p>
+
+<p>I&rsquo;ve not yet seen this idea extended to publishing of analysis of open (statistical) data, but the concepts are the same. Reproducability is another way to increase transparency. Open data has been shown to help people find data errors, but open source can also help people find and fix errors in an analysis itself.</p>
+
+<p>I&rsquo;ll certainly be playing more with R over the coming months. I&rsquo;m sold on the ease with which it&rsquo;s possible to really quickly explore a dataset.</p>
+
+<p>The other hacks produced on the day were all really interesting. I recommend you read <a href="http://www.bathhacked.org/news/and-the-results-are-in/">the run down of the entries on the BathHacked blog</a>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Exploring a Bath Chronicle House Price Story]]></title>
