@@ -1,0 +1,277 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Minecraft Map of Bath - DataSulis</title>
+  <meta name="author" content="Leigh Dodds">
+
+  
+  <meta name="description" content="The Ordnance Survey have published a Minecraft map of Great Britain. Its recently been updated to include more detail. Its a fantastic idea and has, &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://datasulis.github.io/blog/2014/10/15/minecraft-map-of-bath">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="DataSulis" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">DataSulis</a></h1>
+  
+    <h2>Curating local data for local people. In Bath.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:datasulis.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Minecraft Map of Bath</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2014-10-15T19:21:48+01:00'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>15</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>7:21 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>The Ordnance Survey have published <a href="http://www.ordnancesurvey.co.uk/innovate/developers/minecraft-map-britain.html">a Minecraft map of Great Britain</a>. Its recently been updated to include more detail. Its a fantastic idea and has, I think, some potential use as an educational tool.</p>
+
+<p>However the full map is something like 20GB, eating up a fair bit of disk space and memory and making it difficult to use it on older hardware. So I wondered whether there was a way to cut out a limited section of the map focusing on a smaller area. Like Bath for example.</p>
+
+<p>Here&rsquo;s how I did it.</p>
+
+<!-- More -->
+
+
+<p>After I&rsquo;d <a href="https://twitter.com/ldodds/status/516960527990681600">failed to convince the OS to do the work for me</a> my first port of call was to look at whether they had published any code that would let me re-run their world generation. Unfortunately they&rsquo;ve decided not to do that which is a shame. As far as I can tell the world generation is based on open data so would have made a nice showcase for re-purposing their data in a new way. I also didn&rsquo;t want to re-write it from scratch, although it would be an interesting project for someone to tackle. Especially if they were to use additional open sources.</p>
+
+<p>So I started to dig through the plethora of Minecraft level editing tools to find something that I could use. Ideally I wanted to be able to take <a href="http://data.ordnancesurvey.co.uk/doc/geometry/25554-15">the geometry for B&amp;NES</a> and use <a href="http://www.ordnancesurvey.co.uk/innovate/developers/minecraft-coordinate-finder.html">the OS Minecraft co-ordinator finder</a> to cut out the relevant region from the map.</p>
+
+<p>However I struggled to find a command-line tool that would do exactly what I needed. This <a href="https://github.com/mcedit/pymclevel">Python library for reading Minecraft levels</a> looked like what I wanted. It has a command-line application for interacting with a world, including extracting bounded areas into schematics. However I had mixed results. While I was able to load the OS level and extract a schematic I couldn&rsquo;t seem to successfully import it into the empty world I&rsquo;d <a href="https://www.youtube.com/watch?v=DTSyFNIe1JE&amp;src_vid=h_qwraEeIFw&amp;feature=iv&amp;annotation_id=annotation_3192536097">created</a>.</p>
+
+<p>So I turned to <a href="http://www.mcedit.net/">MCEdit</a> which is a graphical Minecraft world editor which also happens to be written in Python. It seems to be well used by people creating large complex Minecraft builds and it has lots of features for copying and pasting sections of levels. I&rsquo;d been reluctant to use it though as I figured it would be slow dealing with such a large world. I was also hoping to script something that could be tailored by other people interested in generating sections of the map covering their own area.</p>
+
+<p>Anyway, I found that MCEdit, while slow to open the file, does provides a nice 2D way to navigate through the world (press Tab when you&rsquo;ve loaded a level to switch perspective). So by jumping to the co-ordinates above Bath (around X:15000, Y:100, Z:45600 will do it) I was able to see the region I wanted to copy.</p>
+
+<p>The MCEdit selection tool allows you to grab an area which you can then extract. You can also choose to &ldquo;prune&rdquo; the rest of the world leaving just your selection. I doubt this is the most efficient way to do it as it takes a couple of hours on my laptop with some fiddling around. But the end result is a level containing just the region surrounding Bath, Keynsham and Bathampton. Its also a lot smaller, about 20Mb.</p>
+
+<p>If you&rsquo;d like to download a copy of the level then you can <a href="http://ldodds.com/projects/minecraft/os-bath.tar.gz">download it here</a>. The map contains Ordnance Survey Data © Crown Copyright and Database Distribution 2014.</p>
+
+<p>I&rsquo;ve set the spawn point to be on Beechen Cliff overlooking the centre of Bath.</p>
+
+<p>Note that the scale isn&rsquo;t 1:1 with normal Minecraft. IIRC a Minecraft block is essentially a 1m cube. For the OS map they explain that a block is more like a cuboid measuring 25 m x 25 m x 12m.</p>
+
+<p>The OS documentation indicates <a href="http://www.ordnancesurvey.co.uk/innovate/developers/minecraft-map-britain.html">which block type maps to which type of geographical feature</a>. You can also <a href="http://www.ordnancesurvey.co.uk/innovate/developers/readme.txt">follow the instructions in their readme to install the level</a>.</p>
+
+<p>What can you do with it? Well, I was wondering whether it might provide a fun and alternative way to visualise some local data. Let me know if you do anything with it!</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Leigh Dodds</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2014-10-15T19:21:48+01:00'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>15</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>7:21 pm</span></time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://datasulis.github.io/blog/2014/10/15/minecraft-map-of-bath/" data-via="datasulis" data-counturl="http://datasulis.github.io/blog/2014/10/15/minecraft-map-of-bath/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/09/22/you-know-nothing-jon-snow/" title="Previous Post: You Know Nothing Jon Sno<sub>x</sub>w&#8221;>&laquo; You Know Nothing Jon Sno<sub>x</sub>w</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/10/15/minecraft-map-of-bath/">Minecraft Map of Bath</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/09/22/you-know-nothing-jon-snow/">You Know Nothing Jon Sno<sub>x</sub>w</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/09/06/exploring-a-bath-chronicle-house-price-story/">Exploring a Bath Chronicle House Price Story</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/09/06/bath-hacked/">Bath Hacked</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/03/29/how-you-can-help-yes/">How You Can Help. Yes, You!</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/datasulis">@datasulis</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'datasulis',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Leigh Dodds -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'datasulis';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://datasulis.github.io/blog/2014/10/15/minecraft-map-of-bath/';
+        var disqus_url = 'http://datasulis.github.io/blog/2014/10/15/minecraft-map-of-bath/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
