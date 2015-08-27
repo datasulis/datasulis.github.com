@@ -4,7 +4,7 @@
   <title><![CDATA[DataSulis]]></title>
   <link href="http://datasulis.github.io/atom.xml" rel="self"/>
   <link href="http://datasulis.github.io/"/>
-  <updated>2014-10-15T20:21:26+01:00</updated>
+  <updated>2015-08-27T14:43:40+01:00</updated>
   <id>http://datasulis.github.io/</id>
   <author>
     <name><![CDATA[Leigh Dodds]]></name>
@@ -12,6 +12,142 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Area Classifications]]></title>
+    <link href="http://datasulis.github.io/blog/2015/08/27/area-classifications/"/>
+    <updated>2015-08-27T13:06:44+01:00</updated>
+    <id>http://datasulis.github.io/blog/2015/08/27/area-classifications</id>
+    <content type="html"><![CDATA[<p>The 2011 UK census can help us understand a little more about the local community. The Office of National Statistics have created &ldquo;pen portraits&rdquo; that describe areas around the UK. I&rsquo;ve put them onto a map to make them easier to explore.</p>
+
+<p>How does the map fit with your understanding of Bath &amp; North East Somerset?</p>
+
+<!-- More -->
+
+
+<p>The map is embedded below, but you can <a href="http://cdb.io/1JxP140">explore the full map on Cartodb</a>. For some of the denser population areas you&rsquo;ll need to zoom in.</p>
+
+<iframe width="100%" height="520" frameborder="0" src="https://ldodds.cartodb.com/viz/01a91afe-4cb3-11e5-91bd-0e0c41326911/embed_map" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+
+
+<p>The map consists of a number of colour coded regions. Each region is what is known as an <strong>output area</strong>. Bath &amp; North East Somerset consists of 583 output areas.</p>
+
+<p>Each output area is colour coded based on the <strong>population cluster</strong> that lives in that region. The population clusters all have names which are shown on the key.</p>
+
+<p>The rest of this post provides some background on the data and how to read the map.</p>
+
+<h2>Output Areas</h2>
+
+<p>An output area is the smallest geographical region for which data is available in the UK census. The areas are sized so that they contain roughly equal numbers of people. This generally means around 125 households, although some are smaller.</p>
+
+<p>By dividing the UK into small regions, it becomes easier to identify changes to the population over time, whilst avoiding giving away any personal information.</p>
+
+<p>Because output areas are sized based on the number of people living in them, they vary widely in how much actual land they include. Obviously rural output areas will tend to be larger, while the more densely populated city areas will be much smaller.</p>
+
+<h2>Population Clusters</h2>
+
+<p>The UK census collects a variety of information about the population. The ONS have assigned each of the output areas in the UK to a population cluster. A cluster is defined by a number of variables, including the demographics of the people living in the area, whether they own their homes, socio-economic indicators and employment status. The ONS have published <a href="http://www.ons.gov.uk/ons/guide-method/geography/products/area-classifications/ns-area-classifications/ns-2011-area-classifications/methodology-and-variables/variables-oa.pdf">a list of the variables used to calculate the clusters</a>.</p>
+
+<p>Each cluster has a name, e.g. &ldquo;Comfortable Cosmopolitans&rdquo; and a description. These are intended to be a memorable short hand for the more complex description that fully describes that cluster of people.</p>
+
+<p>The colours on the map identfy the cluster to which the output area belongs. The key shows the name and colour associated with each cluster.</p>
+
+<p>Because of limits in Cartodb, some of the less frequently occuring clusters have the same colour and are just listed as &ldquo;Other&rdquo; in the key. But if you click on an area it will show the actual name of the cluster.</p>
+
+<p>Because clusters share a definition, then when you see the same colours on the map, then this indicates that there is a similar mix of people living in those areas.</p>
+
+<h2>Clusters in B&amp;NES</h2>
+
+<p>Here is the full list of clusters that appear in B&amp;NES, in alphabetical order along with a count of how many times they appear.</p>
+
+<pre><code>  6 Ageing City Dwellers
+  7 Ageing Rural Dwellers
+ 78 Ageing Urban Living
+ 22 Challenged Diversity
+ 11 Challenged Terraced Workers
+ 25 Comfortable Cosmopolitans
+  1 Constrained Flat Dwellers
+  3 Ethnic Dynamics
+ 16 Farming Communities
+ 40 Hard-Pressed Ageing Workers
+ 25 Industrious Communities
+  7 Inner-City Students
+ 29 Migration and Churn
+  8 Rented Family Living
+ 42 Rural Tenants
+ 62 Semi-Detached Suburbia
+ 54 Students Around Campus
+ 46 Suburban Achievers
+ 96 Urban Professionals and Families
+  5 White Communities
+</code></pre>
+
+<p>Here&rsquo;s that same listed sorted by frequency:</p>
+
+<pre><code> 96 Urban Professionals and Families
+ 78 Ageing Urban Living
+ 62 Semi-Detached Suburbia
+ 54 Students Around Campus
+ 46 Suburban Achievers
+ 42 Rural Tenants
+ 40 Hard-Pressed Ageing Workers
+ 29 Migration and Churn
+ 25 Industrious Communities
+ 25 Comfortable Cosmopolitans
+ 22 Challenged Diversity
+ 16 Farming Communities
+ 11 Challenged Terraced Workers
+  8 Rented Family Living
+  7 Inner-City Students
+  7 Ageing Rural Dwellers
+  6 Ageing City Dwellers
+  5 White Communities
+  3 Ethnic Dynamics
+  1 Constrained Flat Dwellers
+</code></pre>
+
+<p>This immediately gives an overall sense of the mix of the local area. Exploring the map should help build up a picture of where each cluster can be found.</p>
+
+<h2>Pen Portraits</h2>
+
+<p>The names of the clusters are interesting in themselves, but as I noted above there&rsquo;s a description associated with each of them. The ONS have <a href="http://www.ons.gov.uk/ons/guide-method/geography/products/area-classifications/ns-area-classifications/ns-2011-area-classifications/pen-portraits-and-radial-plots/pen-portraits-oa.pdf">published their full list of portraits in a PDF document</a>.</p>
+
+<p>I&rsquo;ve not included them here as there&rsquo;s some useful context in the document. For example each of the clusters is included in a higher-level grouping that defines some common characteristics.</p>
+
+<p>For example there is a super group called &ldquo;Urbanites&rdquo; which is defined as follows:</p>
+
+<blockquote><p>The population of this group are most likely to be located in urban areas in southern England and
+in less dense concentrations in large urban areas elsewhere in the UK. They are more likely to live
+in either flats or terraces, and to privately rent their home. The supergroup has an average ethnic
+mix, with an above average number of residents from other EU countries. A result of this is
+households are less likely to speak English or Welsh as their main language. Those in employment
+are more likely to be working in the information and communication, financial, public administration
+and education related sectors. Compared with the UK, unemployment is lower.</p></blockquote>
+
+<p>This group contains both &ldquo;Urban Professionals and Families&rdquo; and &ldquo;Ageing Urban Living&rdquo;, which are the two most frequent clusters in Bath. These are defined as:</p>
+
+<p><strong>Urban Professionals and Families</strong> - <em>The population of this group shows a noticeably higher proportion of children aged 0 to 14 than the
+parent supergroup and a lower proportion aged 90 and over. There is also a higher proportion of
+people with mixed ethnicity. Households in this group are more likely to live in terraced properties
+and to live in privately rented accommodation. Unemployment is slightly higher than for the parent
+supergroup.</em></p>
+
+<p><strong>Ageing urban living</strong> - <em>The population of this group shows a higher proportion of people aged 65 and over than the parent
+supergroup. Residents are more likely to live in communal establishments, detached properties
+and flats than the supergroup, with a higher proportion of households living in socially rented
+accommodation.</em></p>
+
+<h2>Notes on creating the Map</h2>
+
+<p>The <a href="http://www.ons.gov.uk/ons/guide-method/geography/products/area-classifications/ns-area-classifications/ns-2011-area-classifications/index.html">complete 2011 area classifications</a> can be downloaded from the ONS website.</p>
+
+<p>After exploring the data at a recent <a href="http://bathhacked.org">Bath: Hacked</a> curators night, <a href="https://twitter.com/azazell0">Mark Owen</a> extracted the Bath &amp; North East Somerset data from the national dataset and combined it with the <a href="http://www.ons.gov.uk/ons/guide-method/geography/products/census/spatial/2011/index.html">boundary information</a> for each output area. The resulting shape file was then uploaded to Cartodb.</p>
+
+<p>The resulting shape file was then <a href="https://ldodds.cartodb.com/tables/bath_north_east_somerset_area_classifications">uploaded to Cartodb</a> to create the online map.</p>
+
+<p>The full set of B&amp;NES specific data, without the boundaries, is <a href="https://data.bathhacked.org/Population/2011-B-NES-Area-Classifications/mp58-wts8">available from the Bath: Hacked datastore</a>. This provides some additional context, as the clusters are organised into supergroups that can provide some additional ways to explore the area.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Minecraft Map of Bath]]></title>
